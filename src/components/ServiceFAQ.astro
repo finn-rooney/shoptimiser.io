@@ -1,0 +1,193 @@
+---
+export interface Props {
+    classList: string;
+    id: string;
+    firstQuestion: string;
+    secondQuestion: string;
+    thirdQuestion: string;
+    fourthQuestion: string;
+    firstAnswer: string;
+    secondAnswer: string;
+    thirdAnswer: string;
+    fourthAnswer: string;
+}
+
+const { classList, id, firstQuestion, secondQuestion, thirdQuestion, fourthQuestion, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer } = Astro.props;
+---
+
+<div class={classList} id={id}>
+    <div class="lg:flex lg:justify-center">
+        <div
+            class="relative z-10 border-2 border-black bg-slate-50 p-6 lg:w-2/3 lg:p-12 rounded-2xl"
+        >
+            <h2
+                class="hollow-text text-5xl font-extrabold uppercase lg:text-6xl"
+            >
+                Our Service
+            </h2>
+            <h3
+                class="mt-8 flex justify-center pl-20 text-2xl font-extrabold uppercase md:pl-36"
+            >
+                Frequently Asked Questions
+            </h3>
+
+            <!--Service FAQ Grid Start-->
+
+            <!--#1-->
+            <div class="relative mt-8 w-full overflow-hidden">
+                <input
+                    type="checkbox"
+                    class="peer absolute inset-x-0 top-0 z-10 h-[4.75em] w-full cursor-pointer opacity-0"
+                />
+                <div
+                    class="absolute top-[1.625rem] rotate-0 text-black transition-transform duration-500 peer-checked:rotate-45"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <div class="flex w-full items-center py-6 pl-10">
+                    <h1 class="text-xl font-semibold text-gray-900">
+                        {firstQuestion}
+                    </h1>
+                </div>
+                <div
+                    class="max-h-0 overflow-hidden transition-all duration-1000 peer-checked:max-h-96"
+                >
+                    <div class="p-4 pb-12 md:p-8 md:pl-16 md:pb-12">
+                        <p>
+                            {firstAnswer}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--#2-->
+            <div class="relative w-full overflow-hidden">
+                <input
+                    type="checkbox"
+                    class="peer absolute inset-x-0 top-0 z-10 h-[4.75em] w-full cursor-pointer opacity-0"
+                />
+                <div
+                    class="absolute top-[1.625rem] rotate-0 text-black transition-transform duration-500 peer-checked:rotate-45"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <div
+                    class="flex w-full items-center border-t-2 border-gray-900 py-6 pl-10"
+                >
+                    <h1 class="text-xl font-semibold text-gray-900">
+                        {secondQuestion}
+                    </h1>
+                </div>
+                <div
+                    class="max-h-0 overflow-hidden transition-all duration-1000 peer-checked:max-h-96"
+                >
+                    <div class="p-4 pb-12 md:p-8 md:pl-16 md:pb-12">
+                        <p>
+                            {secondAnswer}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--#3-->
+            <div class="relative w-full overflow-hidden">
+                <input
+                    type="checkbox"
+                    class="peer absolute inset-x-0 top-0 z-10 h-[4.75em] w-full cursor-pointer opacity-0"
+                />
+                <div
+                    class="absolute top-[1.625rem] rotate-0 text-black transition-transform duration-500 peer-checked:rotate-45"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <div
+                    class="flex w-full items-center border-t-2 border-gray-900 py-6 pl-10"
+                >
+                    <h1 class="text-xl font-semibold text-gray-900">
+                        {thirdQuestion}
+                    </h1>
+                </div>
+                <div
+                    class="max-h-0 overflow-hidden transition-all duration-1000 peer-checked:max-h-96"
+                >
+                    <div class="p-4 pb-12 md:p-8 md:pl-16 md:pb-12">
+                        <p>
+                            {thirdAnswer}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--#4-->
+            <div class="relative w-full overflow-hidden">
+                <input
+                    type="checkbox"
+                    class="peer absolute inset-x-0 top-0 z-10 h-[4.75em] w-full cursor-pointer opacity-0"
+                />
+                <div
+                    class="absolute top-[1.625rem] rotate-0 text-black transition-transform duration-500 peer-checked:rotate-45"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <div
+                    class="flex w-full items-center border-t-2 border-gray-900 py-6 pl-10"
+                >
+                    <h1 class="text-xl font-semibold text-gray-900">
+                        {fourthQuestion}
+                    </h1>
+                </div>
+                <div
+                    class="max-h-0 overflow-hidden transition-all duration-1000 peer-checked:max-h-96"
+                >
+                    <div class="p-4 pb-12 md:p-8 md:pl-16 md:pb-12">
+                        <p>
+                            {fourthAnswer}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Service FAQ Grid End-->
+    </div>
+</div>

@@ -1,0 +1,30 @@
+---
+export interface Props {
+    classList: string;
+}
+
+const { classList } = Astro.props;
+---
+
+<footer class={classList}>
+    <div class="container mx-auto">
+        <div class="flex justify-center">
+            <img class="w-72" src="/shoptimiser-alt-svg.svg" />
+        </div>
+        <h1 class="text-3xl font-bold leading-none text-gray-700">
+            Increase Store Conversions By 25% Within
+            <span class="text-green-300">30 Days</span> 🛒
+        </h1>
+        <div class="my-10">
+            <a
+                href="/schedule/"
+                class="rounded-xl bg-gradient-to-br from-purple-500 to-green-400 px-8 py-4 font-normal tracking-wide text-white shadow-lg transition duration-200 ease-in-out hover:-translate-y-1 hover:shadow-xl focus:outline-none"
+            >
+                Request A FREE Store Audit
+            </a>
+        </div>
+    </div>
+    <div>
+        <p>2022 Shoptimiser.io All Rights Reserved</p>
+    </div>
+</footer>

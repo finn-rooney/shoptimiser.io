@@ -1,0 +1,360 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProtocolStep from "../components/ProtocolStep.astro";
+import Brand from "../components/Brand.astro";
+import CartDrawingSVG from "../components/svg-components/CartDrawingSVG.astro";
+import Footer from "../components/Footer.astro";
+import ServiceFAQ from "../components/ServiceFAQ.astro";
+
+const scheduleURL = "/schedule/";
+---
+
+<Layout title="Shoptimiser - Capture Future Missed Conversions">
+    <!-- Page Specific Styles -->
+    <style>
+        .hidden-element {
+            transition: all 1s ease-in-out;
+            opacity: 0;
+            transform: rotateZ(0) translateY(200px);
+        }
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .show.rotate:nth-child(1) {
+            opacity: 1;
+            transform: rotateZ(-10deg) translateY(0);
+        }
+        .show.rotate:nth-child(2) {
+            opacity: 1;
+            transform: rotateZ(-40deg) translateY(-40px);
+        }
+        .show.rotate:nth-child(3) {
+            opacity: 1;
+            transform: rotateZ(10deg) translateY(0);
+        }
+
+        @media (max-width: 600px) {
+            .result {
+                width: 150px !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                max-width: 512px;
+            }
+        }
+
+        @media (max-width: 512px) {
+            .container {
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .container {
+                max-width: 350px;
+            }
+        }
+
+    </style>
+    <!-- Main Start -->
+    <section class="min-h-screen bg-slate-50 lg:min-h-screen">
+        
+        <!-- Nav Start -->
+        <div
+            class="container mx-auto flex justify-center pt-6 md:items-center md:justify-between md:py-6"
+        >
+            <img class="w-72" src="/shoptimiser-alt-svg.svg" />
+            <ul class="hidden items-center gap-4 text-slate-900 md:flex">
+                <li>
+                    <button
+                        class="uppercase hover:text-slate-700 hover:bg-white transition duration-300 ease-in-out py-3 px-4 rounded-md"
+                        onclick="scrollToServiceSection()"
+                    >
+                        FAQ
+                    </button>
+                </li>
+                <li>
+                    <button
+                        class="uppercase hover:text-slate-700 hover:bg-white transition duration-300 ease-in-out py-3 px-4 rounded"
+                        onclick="scrollToProcessSection()"
+                    >
+                        What We Do
+                    </button>
+                </li>
+                <li>
+                    <a
+                        href={scheduleURL}
+                        class="rounded border-2 border-green-300 bg-transparent px-4 py-1 font-semibold text-green-300 transition duration-300 ease-in-out hover:border-green-300 hover:bg-green-300 hover:text-white focus:outline-none sm:px-8 sm:py-3 uppercase"
+                    >
+                        Free Audit
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+        <!-- Nav End -->
+
+
+        <!-- Hero Start -->
+        <div class="flex items-center">
+
+            <div class="container mx-auto py-[2vh] lg:px-20">
+                <div
+                    class="flex flex-col-reverse items-center text-center lg:mt-12 lg:flex-row lg:text-left"
+                >
+                    <!--Hero Left Start-->
+                    <div class="lg:w-7/12">
+                        <!--Hero Heading/Subheading Start-->
+                        <h1
+                            class="text-4xl font-bold leading-none text-gray-700 md:text-5xl"
+                        >
+                            We
+                            <span class="text-green-300">
+                                Increase Store Conversions By 25%
+                            </span>
+                            Without Spending More Money Within 30 Days.
+                        </h1>
+                        <div class="flex justify-center lg:w-5/12">
+                            <CartDrawingSVG classList="max-h-96 lg:hidden" />
+                        </div>
+                        <p
+                            class="text-true-gray-500 text-xl font-light antialiased mb-10 md:mt-6"
+                        >
+                            INSTANTLY give yourself & your customers a more modern Shopify store
+                            experience on a heavily-optimised site (no theme change) that converts higher before this month is over
+                            <br /><br />Burning your advertising budget can wait.
+                        </p>
+                        <!--Hero Heading/Subheading Start-->
+                        <!--Hero CTA Button Start-->
+                        <a
+                            href={scheduleURL}
+                            class="rounded-xl bg-gradient-to-br from-purple-500 to-green-400 px-8 py-4 tracking-wide text-white shadow-lg outline-none transition duration-200 ease-in-out hover:-translate-y-1 hover:shadow-xl focus:outline-none font-semibold"
+                        >
+                            Request Your FREE Store Audit
+                        </a>
+                        <!--Hero CTA Button End-->
+                    </div>
+                    <!--Hero Left End-->
+    
+                    <!--Hero Right Start-->
+                    <div class="flex w-72 justify-center lg:w-5/12">
+                        <CartDrawingSVG classList="hidden lg:block" />
+                    </div>
+                    <!--Hero Right End-->
+                </div>
+                <!-- Brands -->
+                <div 
+                    class="flex justify-center gap-6 grayscale mt-12 xl:mt-0"
+                >
+                    <Brand 
+                        logo="/spookyslides.png" 
+                        alt="Spooky Slides Logo" 
+                        width={200}
+                    />
+                    <Brand 
+                        logo="/pleatwear.png" 
+                        alt="Pleatwear Logo" 
+                        width={150}
+                    />
+                </div>
+                <!-- Brands -->
+                <h2
+                    class="my-12 text-center text-2xl lg:text-3xl font-bold text-gray-600 md:mt-6 lg:mt-6"
+                >
+                    <span 
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-green-400"
+                    >
+                        $800k/month Into $1M/month
+                    </span>
+                    Within <u></u>
+                    <span class="bg-green-300 px-1 py-1 text-slate-50">
+                        30 Days
+                    </span>
+                </h2>
+                <!--Scroll Encouragement Icon Start-->
+                <div class="mt-12 flex justify-center lg:mt-12">
+                    <button
+                        type="button"
+                        class="bg-cool-gray-100 hover:bg-cool-gray-50 flex h-12 w-12 animate-bounce cursor-pointer items-center justify-center rounded-full text-gray-800 transition duration-300 ease-in-out hover:text-gray-900"
+                        onclick="scrollToMissionStatementSection()"
+                    >
+                        <svg
+                            class="h-12 w-12"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                </div>
+                <!--Scroll Encouragement Icon End-->
+            </div>
+        </div>
+    </section>
+    <!-- Hero End -->
+
+
+    <section id="mission-statement" class="py-24">
+        <div class="text-center max-w-2xl mx-auto px-4">
+            <h1 class="hidden-element text-4xl font-bold my-5">
+                The EXACT accelerator protocol we used to scientifically turn $800k/month into $1M/month in RAPID time
+            </h1>
+            <p class="hidden-element text-xl text-gray-500 my-5">
+                Unlike so-called 'CRO agencies' we go much deeper to leverage our hyper-specific store diagnosis. We do NOT formulate 'fluff' ideas about how to improve your CRO. Our store acceleration solutions are based on pure mathmatical evidence, not wishful thinking.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a
+                    href={scheduleURL}
+                    class="hidden-element py-6 px-4 bg-gradient-to-br from-purple-500 to-green-400 text-white w-full mx-auto rounded-xl text-lg hover:-translate-y-1 shadow-lg hover:shadow-xl transition-all duration-300 font-bold"
+                    >Request Your FREE Store Audit</a
+                >
+                <button
+                    onclick="scrollToServiceSection()"
+                    class="hidden-element py-6 px-4 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-green-400 w-full mx-auto rounded-xl text-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-100 border-[1px] shadow-lg"
+                    >Frequently Asked Questions</button
+                >
+            </div>
+        </div>
+        <div class="flex container mx-auto justify-center items-center py-20">
+            <img
+                src="/pleatwear-before.jpeg"
+                width="250"
+                height="721"
+                class="result hidden-element rotate rounded-3xl max-w-[49%] md:max-w-md shadow-2xl"
+            />
+            <img 
+                src="/transformation-arrow.svg"
+                width="150"
+                class="hidden-element rotate absolute z-20"
+            />
+            <img
+                src="/pleatwear-after.jpeg"
+                width="250"
+                height="720"
+                class="result hidden-element rotate rounded-3xl max-w-[49%] md:max-w-md shadow-2xl z-10"
+            />
+        </div>
+
+    </section>
+
+    <!-- Main End -->
+
+
+    <!-- Benefits Start -->
+
+    <section class="bg-slate-50 text-center lg:text-left" id="process">
+        <!--Grid Container-->
+        <!--
+        <div
+            class="container mx-auto bg-[url('/hero-grid.svg')] bg-cover bg-no-repeat pb-20"
+        >
+        -->
+        <div
+            class="container mx-auto pb-20"
+        >
+            <ProtocolStep 
+                heading="Shopify Store Audit 📝"
+                paragraph="We will start your project with a complete website store audit. This is no cookie-cutter report either, it’s completely personalised to your store and we will identify the key areas stopping your customers from buying." 
+                image="/fast_loading.svg" 
+                switched={false} 
+            />
+            <ProtocolStep 
+                heading="Access & Deep Analysis 🔎"
+                paragraph="This is when we will validate our initial findings. In this stage we will run diagonistics from the backend of your Shopify store to pinpoint the exact issues that are putting a ceiling on your current conversion rate. (p.s. to let you in on a secret, we will already know before this stage)"
+                image="/success_factors.svg"
+                switched={true} 
+            />
+            <ProtocolStep 
+                heading="Implementation Protocol 🚀" 
+                paragraph="We will begin by fixing the root of your site speed and conversion problem. From here it’s about transforming your site into a conversion-oriented store built to attract and convert new customers."
+                image="/rocket_takeoff.svg"
+                switched={false} 
+            />
+            
+        </div>
+        <!--Grid Container-->
+    </section>
+
+    <!-- Benefits Section End -->
+
+    <section class="bg-slate-900 text-center">
+        <div class="container mx-auto py-20 flex flex-col gap-10">
+            <h1 class="hidden-element text-5xl text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-green-300 font-bold">Request Your Store Audit With Us</h1>
+            <p class="hidden-element max-w-[50ch] mx-auto text-slate-300">
+                <i>"The Shoptimiser team are absolute ROCK STARS! We increased our conversions by 25% within ONE month!
+                    I would recommend Shoptimiser to any Ecommerce brand that feels like they're doing everything but know deep down (in their heart of hearts) they can do better.
+                    We had issues with Pleatwear’s site bottlenecks in the code I didn't even know about.
+                    Very happy with the result and would definitely recommend the team!
+                    <span class="text-white">– Cooper M. (Founder at PleatWear)</span>
+                </i>
+            </p>
+            <a
+                href={scheduleURL}
+                class="hidden-element py-6 px-4 bg-gradient-to-br from-purple-500 to-green-400 text-white w-full mx-auto rounded-xl text-lg hover:-translate-y-1 shadow-lg hover:shadow-xl transition-all duration-300 font-bold md:w-[300px]"
+            >
+                Request Your FREE Store Audit
+            </a>
+        </div>
+    </section>
+
+
+    
+    <!-- Service Section Start -->
+
+    <!-- 
+    <section class="bg-gradient-to-tr from-purple-400 to-green-300">
+    -->
+
+    <section class="bg-gradient-to-b from-slate-800 to-slate-500">
+
+        <ServiceFAQ 
+            classList="hidden-element container mx-auto py-24"
+            id="our-service"
+            firstQuestion="Why Should I Hire Shoptimiser?"
+            firstAnswer="We truly have the best protocol on the market for increasing site conversions specifically for Shopify websites. We are experts at solving this problem and we know we can fix your website within such a short timeframe."
+            secondQuestion="What Businesses Do You Work With?"
+            secondAnswer="We exclusively work with Shopify stores that are generating 50k and above per month in revenue."
+            thirdQuestion="How Much Will It Cost?"
+            thirdAnswer="Our pricing is dependent on a number of factors such as your current monthly revenue, size and complexity of your business, as well as the monthly revenue you want to achieve. We’re happy to give you a quote specifically for your business on a quick demo call." 
+            fourthQuestion="How Soon Will I See Results?"
+            fourthAnswer="Our process is designed to take between 10-30 days. We typically see results within a couple of weeks in, because we are experts at what we do. The longest we have seen for results to come in is in day 29. We give ourselves more room to succeed on our projects. However, with every client we onboard, different variables can lead to different results and therefore than others to see results."
+        />
+
+        <div class="hidden-element container backdrop-blur-sm bg-slate-400/80 mx-auto p-10 sm:p-20 text-center shadow-2xl rounded-tl-[50px] rounded-br-[50px] text-white mb-20">
+            <h1 class="hidden-element text-3xl leading-normal md:text-5xl md:leading-none font-bold">
+                <span class="bg-green-300 px-1 py-1">Save</span>
+                Time & Advertising Spend
+                <span class="bg-green-300 px-1 py-1">With Shoptimiser</span>
+            </h1>
+            <div class="grid lg:grid-cols-2 my-10 gap-4">
+                <div class="flex flex-col gap-10 my-10 xl:px-20">
+                    <img src="bear_market.svg" width="300" class="hidden-element mx-auto"/>
+                    <h2 class="hidden-element text-2xl" ><span class="text-red-400 font-bold">Option 1:</span><br>Spend More On Advertising</h2>
+                    <p class="hidden-element">The simple solution to increase your revenue (as any marketer would suggest) is to scale your advertising budget. However, this cost you months and months and thousands of dollars to implement this and actually achieve an increase of at least 25%.<br><br>You will lose plenty of cash on not only the advertising budget but on the opportunity cost for your business by wasting time trying to spend more on your ads.</p>
+                </div>
+                <div class="flex flex-col gap-10 my-10 xl:px-20">
+                    <img src="revenue.svg" width="200" class="hidden-element mx-auto"/>
+                    <h2 class="hidden-element text-2xl" ><span class="text-green-300 font-bold">Option 2:</span><br>Apply For our <b>Store Conversion Accelerator</b>
+                    </h2>
+                    <p class="hidden-element">Or you can apply for our Store Conversion Accelerator and immediately increase your site conversion rate without spending any additional money (other than the cost of our service) and result in hundreds of new paying customers visiting your site in the next 30 days or less visiting your site.<br><br>This is better, faster and considerably cheaper than you spending more money on any other revenue stream in your business right now. Fix this and you will see instant results.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer  -->
+        <Footer classList="bg-slate-100 bg-opacity-0 py-10 text-center transition-all duration-300 hover:bg-opacity-100" />
+        <!-- Footer -->
+    </section>
+
+    <!-- Service Section End -->
+
+</Layout>

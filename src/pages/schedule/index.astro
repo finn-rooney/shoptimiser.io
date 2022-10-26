@@ -1,0 +1,12 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Calendly from "../../components/Calendly.astro";
+
+const calendlyUrl = "https://calendly.com/joezlnay/storeaudit?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=3b3b3b&text_color=ffffff&primary_color=86efac";
+---
+
+<Layout title="Book Your FREE Store Audit">
+    <section>
+        <Calendly calendlyUrl={calendlyUrl} />
+    </section>
+</Layout>

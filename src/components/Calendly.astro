@@ -1,0 +1,19 @@
+---
+export interface Props {
+    calendlyUrl: string;
+}
+
+const { calendlyUrl } = Astro.props;
+---
+
+<div
+    class="calendly-inline-widget rounded-3xl bg-transparent md:px-6"
+    data-url={calendlyUrl}
+    style="min-width: 320px; height: 700px"
+>
+</div>
+<script
+    type="text/javascript"
+    src="https://assets.calendly.com/assets/external/widget.js"
+    defer
+></script>

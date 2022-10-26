@@ -1,0 +1,51 @@
+---
+export interface Props {
+    id: string;
+    classList: string;
+}
+
+const { id, classList } = Astro.props;
+---
+
+<section id={id} class={classList}>
+    <div class="text-center max-w-2xl mx-auto px-4">
+        <h1 class="text-4xl font-bold my-5">
+            We turn your website visitors into loyal paying customers
+            through user split-testing, data analysis and heat mapping. But
+            that's just the tip of the iceberg...
+        </h1>
+        <p class="text-xl text-gray-500 my-5">
+            Unlike other CRO agencies we go much wider than simple on-site
+            optimisation. Utilising our experience, including founding our
+            own 7, 8 and even 9 figure e-commerce brands and businesses, we
+            are able to make highly informed data-driven decisions and
+            recommendations across all facets of your business.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <a
+                href="/schedule/"
+                class="py-6 px-4 bg-gradient-to-br from-purple-500 to-green-400 text-white w-full mx-auto rounded-xl text-lg hover:-translate-y-1 shadow-lg hover:shadow-xl transition-all duration-300 font-bold"
+                >Book A Free Discovery Call</a
+            >
+            <button
+                onclick="scrollToServiceSection()"
+                class="py-6 px-4 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-green-400 w-full mx-auto rounded-xl text-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300 border-[1px] shadow-lg"
+                >Frequently Asked Questions</button
+            >
+        </div>
+    </div>
+    <div class="flex container mx-auto justify-center items-center py-20">
+        <img
+            src="/shopify-dashboard-1.png"
+            width="1280"
+            height="721"
+            class="hidden-element rounded-3xl max-w-[49%] md:max-w-md z-10"
+        />
+        <img
+            src="/shopify-dashboard-2.png"
+            width="903"
+            height="720"
+            class="hidden-element rounded-3xl max-w-[49%] md:max-w-md"
+        />
+    </div>
+</section>

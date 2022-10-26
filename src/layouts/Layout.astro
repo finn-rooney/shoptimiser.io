@@ -1,0 +1,29 @@
+---
+export interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <script src="/intersection-observer.js" defer></script>
+        <script src="/button-scroll.js" defer></script>
+    </head>
+    <body class="bg-slate-50 text-gray-700 overflow-x-hidden">
+        <slot />
+        <style is:global>
+            .hollow-text {
+                -webkit-text-stroke: 1.8px rgb(0, 0, 0);
+                -webkit-text-fill-color: transparent;
+            }
+        </style>
+    </body>
+</html>

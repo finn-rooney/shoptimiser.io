@@ -1,0 +1,47 @@
+---
+export interface Props {
+	heading: string;
+	paragraph: string;
+	image: string;
+	switched: boolean;
+}
+
+const { heading, paragraph, image, switched } = Astro.props;
+---
+
+<!--Benefit Start-->
+<div class="py-6 lg:px-20">
+	<div
+		class="hidden-element mx-auto grid grid-cols-1 items-center justify-between gap-6 rounded-3xl bg-white px-6 py-12 shadow-xl lg:grid-cols-2 lg:px-24"
+	>
+		<!--Benefit Left Start-->
+		<div class={switched ? "order-2" : "order-1"}>
+			<!--Benefit Heading/Subheading Start-->
+
+			<div
+				class="text-2xl font-bold leading-none text-gray-700 md:text-4xl"
+			>
+				{heading}
+			</div>
+			<div
+				class="text-true-gray-500 mt-6 text-lg font-light antialiased lg:text-xl"
+			>
+				{paragraph}
+			</div>
+
+			<!--Benefit Heading/Subheading End-->
+		</div>
+		<!--Benefit Left End-->
+
+		<!--Benefit Right Start-->
+		<div class={switched ? "order-1 flex justify-center" : "order-2 flex justify-center" }>
+			<img
+				class="lg:max-w-md"
+				src={image}
+				width="350"
+			/>
+		</div>
+		<!--Benefit Right End-->
+	</div>
+</div>
+<!--Benefit End-->
