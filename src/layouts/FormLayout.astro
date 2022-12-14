@@ -1,0 +1,49 @@
+---
+export interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="robots" content="noindex" />
+        <title>{title}</title>
+    </head>
+    <body class="bg-slate-200 text-gray-700 overflow-x-hidden">
+        <div
+            class="container mx-auto flex justify-center pt-6 md:items-center md:justify-between md:py-6"
+        >
+            <img class="w-72" src="/shoptimiser-alt-svg.svg" />
+        </div>
+        <slot />
+        <style is:global>
+            .hollow-text {
+                -webkit-text-stroke: 1.8px rgb(0, 0, 0);
+                -webkit-text-fill-color: transparent;
+            }
+            .snowflake {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background: linear-gradient(white, white);
+                border-radius: 50%;
+                filter: drop-shadow(0 0 10px white);
+            }
+        </style>
+        <footer class="py-10 text-center">
+            <div class="container mx-auto">
+                <div class="flex justify-center">
+                    <img class="w-72" src="/shoptimiser-alt-svg.svg" />
+                </div>
+            </div>
+            <p>2022 Shoptimiser.io All Rights Reserved</p>
+        </footer>
+    </body>
+</html>
