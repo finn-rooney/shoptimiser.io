@@ -3,6 +3,7 @@ import OfferLayout from "../../layouts/OfferLayout.astro";
 
 const scheduleURL = "/schedule/";
 const stripeURL = "https://buy.stripe.com/28o29z84nb7aaLS000";
+const testStripeURL = "https://buy.stripe.com/test_dR68Aceng3PZfwA3cc";
 ---
 
 <OfferLayout title="Double Conversions Before 🎄">
@@ -65,7 +66,7 @@ const stripeURL = "https://buy.stripe.com/28o29z84nb7aaLS000";
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
                 <a
-                    href={stripeURL}
+                    href={testStripeURL}
                     class="py-6 px-4 bg-gradient-to-br from-red-400 to-green-400 text-white w-full mx-auto rounded-xl text-lg hover:-translate-y-1 shadow-lg hover:shadow-xl transition-all duration-300 font-bold astro-VMT4SRVX show"
                     >Let's Fix My Store NOW</a
                 >
