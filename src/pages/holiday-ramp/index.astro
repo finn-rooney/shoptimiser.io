@@ -14,6 +14,50 @@ const testStripeURL = "https://buy.stripe.com/test_dR68Aceng3PZfwA3cc";
                 Instantly Add $50-250k to your CBD businesses’ monthly run rate
                 before this Christmas period
             </h1>
+            <div
+                class="flex container mx-auto justify-center items-center py-20"
+            >
+                <img
+                    src="/pleatwear-before.jpeg"
+                    width="250"
+                    height="721"
+                    class="result hidden-element rotate rounded-3xl max-w-[49%] md:max-w-md shadow-2xl"
+                />
+                <img
+                    src="/transformation-arrow.svg"
+                    width="150"
+                    class="hidden-element rotate absolute z-20"
+                />
+                <img
+                    src="/pleatwear-after.jpeg"
+                    width="250"
+                    height="720"
+                    class="result hidden-element rotate rounded-3xl max-w-[49%] md:max-w-md shadow-2xl z-10"
+                />
+            </div>
+            <style>
+                .hidden-element {
+                    transition: all 1s ease-in-out;
+                    opacity: 0;
+                    transform: rotateZ(0) translateY(200px);
+                }
+                .show {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                .show.rotate:nth-child(1) {
+                    opacity: 1;
+                    transform: rotateZ(-10deg) translateY(0);
+                }
+                .show.rotate:nth-child(2) {
+                    opacity: 1;
+                    transform: rotateZ(-40deg) translateY(-40px);
+                }
+                .show.rotate:nth-child(3) {
+                    opacity: 1;
+                    transform: rotateZ(10deg) translateY(0);
+                }
+            </style>
             <p class="mb-10 lg:mb-20 text-md lg:text-lg">
                 <br /><br />Our Store Accelerator Method increases store
                 conversions dramatically without advertising.
